@@ -2,6 +2,10 @@ package JEECourse.calculator;
 
 public interface Calculator {
 
-	int convertStringToInt(String string);
+	String add(String left, String right);
+
+	String subtract(String left, String right);
+
+	int compare(String left, String right);
 
 }
