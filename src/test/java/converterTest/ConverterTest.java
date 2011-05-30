@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import calculator.ArrayCalculator;
 import converter.Converter;
-import converter.ConverterReal;
+import converterImpl.ConverterReal;
 
 public class ConverterTest{
 	
@@ -138,5 +138,15 @@ public class ConverterTest{
 		String expected = "221";
 		
 		assertEquals("", expected, result);
+	}
+	
+	@Test 
+	public void convertStringToIntArray(){
+		Converter converter = new ConverterReal();
+		int[] result = converter.convertStringToIntArray("123456");
+		
+		int[] expected = {1,2,3,4,5,6};
+		
+		assertArrayEquals("String converted to int array", expected, result);
 	}
 }

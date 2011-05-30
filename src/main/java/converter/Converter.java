@@ -22,4 +22,6 @@ public interface Converter {
 
 	String convertCollectionToString(List<Integer> collectionInteger);
 
+	int[] convertStringToIntArray(String stringToIntArray);
+
 }

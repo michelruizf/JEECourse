@@ -1,6 +1,8 @@
-package converter;
+package converterImpl;
 
 import java.util.List;
+
+import converter.Converter;
 
 public class ConverterReal implements Converter {
 
@@ -83,5 +85,10 @@ public class ConverterReal implements Converter {
 		}
 		if(stringBuilder.charAt(0) == '0') stringBuilder.setCharAt(0, '-');
 		return stringBuilder.toString();
+	}
+
+	public int[] convertStringToIntArray(String stringToIntArray) {		
+		String[] stringToArray = convertStringToArray(stringToIntArray);
+		return convertStringArrayToIntArray(stringToArray);
 	}
 }
