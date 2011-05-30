@@ -20,4 +20,6 @@ public interface Converter {
 	
 	int[] convertCollectionToArrayInt(List<Integer> collectionInteger);
 
+	String convertCollectionToString(List<Integer> collectionInteger);
+
 }

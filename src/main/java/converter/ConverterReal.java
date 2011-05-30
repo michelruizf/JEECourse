@@ -73,4 +73,15 @@ public class ConverterReal implements Converter {
 		
 		return result;
 	}
+
+	public String convertCollectionToString(List<Integer> collectionInteger) {
+		
+		StringBuilder stringBuilder = new StringBuilder();
+		
+		for (Integer integer : collectionInteger) {
+			stringBuilder.append(String.valueOf(integer));
+		}
+		
+		return stringBuilder.toString();
+	}
 }

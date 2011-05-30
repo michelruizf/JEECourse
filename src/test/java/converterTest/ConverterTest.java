@@ -127,4 +127,16 @@ public class ConverterTest{
 		
 		assertEquals("Result of add arrays", expected, result);
 	}
+	
+	@Test
+	public void convertCollectionToString(){
+		List<Integer> collectionInteger = Arrays.asList(2,2,1);
+		
+		Converter converter = new ConverterReal();
+		String result = converter.convertCollectionToString(collectionInteger);
+		
+		String expected = "221";
+		
+		assertEquals("", expected, result);
+	}
 }
