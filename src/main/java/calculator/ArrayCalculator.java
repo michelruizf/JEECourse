@@ -61,8 +61,13 @@ public class ArrayCalculator {
 				sum = this.firstArray[i] - this.secondArray[i] + 10 - rest;
 				rest = 1;
 			} else {
-				sum = this.firstArray[i] - this.secondArray[i] - rest;
-				rest = 0;
+				if (this.firstArray[i] == this.secondArray[i]){
+					sum = this.firstArray[i] - this.secondArray[i] + 10 - rest;
+					rest = 1;
+				} else {
+					sum = this.firstArray[i] - this.secondArray[i] - rest;
+					rest = 0;
+				}
 			}
 			result.add(sum);
 		}
@@ -70,7 +75,7 @@ public class ArrayCalculator {
 		if (rest != 0){
 			int[] newArray = new int[firstArray.length + 1];
 			newArray[0] = 1;
-			
+			Collections.reverse(result);
 			int[] arrayInt = arrayConverter.convertCollectionToArrayInt(result);
 			
 			result = subtractArrays(newArray, arrayInt);

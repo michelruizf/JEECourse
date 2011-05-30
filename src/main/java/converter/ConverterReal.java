@@ -75,13 +75,13 @@ public class ConverterReal implements Converter {
 	}
 
 	public String convertCollectionToString(List<Integer> collectionInteger) {
-		
+				
 		StringBuilder stringBuilder = new StringBuilder();
 		
 		for (Integer integer : collectionInteger) {
 			stringBuilder.append(String.valueOf(integer));
 		}
-		
+		if(stringBuilder.charAt(0) == '0') stringBuilder.setCharAt(0, '-');
 		return stringBuilder.toString();
 	}
 }

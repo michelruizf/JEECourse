@@ -30,7 +30,7 @@ public class CalculatorTest {
 		String result = calculator.subtract("9876543210", "123456789012345");
 		
 		//Aqui deveria estar com o sinal negativo
-		assertEquals("Result of subtract huge integers with negative value", "0123446912469135", result);
+		assertEquals("Result of subtract huge integers with negative value", "-123446912469135", result);
 	}
 
 }
