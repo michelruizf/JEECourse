@@ -137,7 +137,7 @@ public class ConverterTest{
 		
 		String expected = "221";
 		
-		assertEquals("", expected, result);
+		assertEquals("Collection converted to string", expected, result);
 	}
 	
 	@Test 
