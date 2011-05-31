@@ -46,5 +46,25 @@ public class MyFunctions {
 		
 		
 	}
+	
+	public static Function<String, Integer> toStringFunction() {
+		return ToStringFunction.INSTANCE;
+	}
+	
+	private enum ToStringFunction implements Function<String, Integer>{
+		INSTANCE;
+
+		@Override
+		public String toString() {
+			return super.toString();
+		}
+
+		public Integer apply(String input) {
+			return Integer.parseInt(input);
+		}
+		
+		
+		
+	}
 
 }
