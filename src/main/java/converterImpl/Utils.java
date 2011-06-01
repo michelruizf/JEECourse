@@ -14,14 +14,27 @@ public class Utils {
 		Iterable<String> stringIterator = Splitter.fixedLength(1).split(stringToArray);
 		String[] stringArray = Iterables.toArray(stringIterator, String.class);
 		
-		Collection<Integer> collection = Collections2.transform(Arrays.asList(stringArray), MyFunctions.toStringFunction());
+		Collection<Integer> collection = Collections2.transform(Arrays.asList(stringArray), MyFunctions.toIntegerFunction());
 		
 		return Ints.toArray(collection);
 	}
 	
-	public static String convertCollectionToString(Collection collection){
-		return null;
+	public static String convertCollectionToString(Collection<Integer> collection){
+		StringBuffer stringBuffer = new StringBuffer();
+		boolean isNegativeCollection = false;
 		
+		isNegativeCollection = collection.contains(-1);
+		
+		for (Integer element : collection) {
+			stringBuffer.append(element.toString());
+		}
+				
+		if(isNegativeCollection) {
+			stringBuffer.setCharAt(0, '-');
+		}
+		
+		String result = stringBuffer.toString().replaceFirst("-1", "-");
+		
+		return result;
 	}
-
 }

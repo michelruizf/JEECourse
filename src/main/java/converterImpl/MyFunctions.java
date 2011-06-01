@@ -47,11 +47,11 @@ public class MyFunctions {
 		
 	}
 	
-	public static Function<String, Integer> toStringFunction() {
+	public static Function<Integer, String> toStringFunction() {
 		return ToStringFunction.INSTANCE;
 	}
 	
-	private enum ToStringFunction implements Function<String, Integer>{
+	private enum ToStringFunction implements Function<Integer, String>{
 		INSTANCE;
 
 		@Override
@@ -59,12 +59,9 @@ public class MyFunctions {
 			return super.toString();
 		}
 
-		public Integer apply(String input) {
-			return Integer.parseInt(input);
+		public String apply(Integer input) {
+			return String.valueOf(input);
 		}
-		
-		
-		
-	}
 
+	}
 }

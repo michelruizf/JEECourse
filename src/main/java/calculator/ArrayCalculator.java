@@ -12,6 +12,7 @@ public class ArrayCalculator {
 	private int[] firstArray;
 	private int[] secondArray;
 	private Converter arrayConverter = new ConverterReal();
+	private boolean isNegative = false;
 
 	public List<Integer> addArrays(int[] arrayLeft, int[] arrayRight) {
 		
@@ -78,12 +79,16 @@ public class ArrayCalculator {
 			Collections.reverse(result);
 			int[] arrayInt = arrayConverter.convertCollectionToArrayInt(result);
 			
+			this.isNegative = true;
+			
 			result = subtractArrays(newArray, arrayInt);
 			
 			return result;
 		}
-		
+				
 		Collections.reverse(result);
+		
+		if(isNegative) result.set(0, -1);
 		
 		return result;
 	}
