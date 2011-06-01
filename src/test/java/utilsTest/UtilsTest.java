@@ -1,4 +1,4 @@
-package converterTest;
+package utilsTest;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,8 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import converterImpl.Utils;
+import commons.utils.Utils;
+
 
 public class UtilsTest {
 

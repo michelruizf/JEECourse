@@ -1,10 +1,11 @@
-package calculatorImpl;
+package calculator.impl;
 
 import java.util.List;
 
-import calculator.ArrayCalculator;
+import commons.arrayCalculator.ArrayCalculator;
+import commons.utils.Utils;
+
 import calculator.Calculator;
-import converterImpl.Utils;
 
 public class CalculatorImpl implements Calculator {
 	

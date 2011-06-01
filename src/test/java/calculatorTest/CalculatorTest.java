@@ -1,10 +1,10 @@
-package converterTest;
+package calculatorTest;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 import calculator.Calculator;
-import calculatorImpl.CalculatorImpl;
+import calculator.impl.CalculatorImpl;
 
 public class CalculatorTest {
 	

@@ -1,4 +1,4 @@
-package converterImpl;
+package commons.utils;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -7,6 +7,7 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Iterables;
 import com.google.common.primitives.Ints;
+import commons.functions.MyFunctions;
 
 public class Utils {
 

@@ -9,9 +9,10 @@ import java.util.List;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import calculator.ArrayCalculator;
+import commons.arrayCalculator.ArrayCalculator;
+
 import converter.Converter;
-import converterImpl.ConverterReal;
+import converter.impl.ConverterReal;
 
 public class ConverterTest{
 	

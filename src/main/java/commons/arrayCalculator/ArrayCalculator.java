@@ -1,11 +1,11 @@
-package calculator;
+package commons.arrayCalculator;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import converter.Converter;
-import converterImpl.ConverterReal;
+import converter.impl.ConverterReal;
 
 public class ArrayCalculator {
 	

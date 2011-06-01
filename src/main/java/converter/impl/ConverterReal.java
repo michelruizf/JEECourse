@@ -1,4 +1,4 @@
-package converterImpl;
+package converter.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,6 +10,9 @@ import com.google.common.collect.Collections2;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import com.google.common.primitives.Ints;
+
+import commons.functions.MyFunctions;
+import commons.transforms.MyTransform;
 
 import converter.Converter;
 
