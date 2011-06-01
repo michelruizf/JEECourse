@@ -32,5 +32,28 @@ public class CalculatorTest {
 		//Aqui deveria estar com o sinal negativo
 		assertEquals("Result of subtract huge integers with negative value", "-123446912469135", result);
 	}
-
+	
+	@Test
+	public void compareStringLeftLower(){
+		Calculator calculator = new CalculatorImpl();
+		int result = calculator.compare("123","321");
+		
+		assertEquals("Result of the comparison between the strings", -1, result);
+	}
+	
+	@Test
+	public void compareStringLeftGreater(){
+		Calculator calculator = new CalculatorImpl();
+		int result = calculator.compare("4123","321");
+		
+		assertEquals("Result of the comparison between the strings", 1, result);
+	}
+	
+	@Test
+	public void compareStringEquals(){
+		Calculator calculator = new CalculatorImpl();
+		int result = calculator.compare("321","321");
+		
+		assertEquals("Result of the comparison between the strings", 0, result);
+	}
 }

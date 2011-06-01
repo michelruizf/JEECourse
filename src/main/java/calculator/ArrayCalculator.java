@@ -93,4 +93,18 @@ public class ArrayCalculator {
 		return result;
 	}
 
+	public int compareArrays(int[] leftIntArray, int[] rightIntArray) {
+		
+		defineSizeOfArrays(leftIntArray, rightIntArray);
+		
+		for (int i = 0; i < rightIntArray.length; i++) {
+			if(leftIntArray[i] < rightIntArray[i]){
+				return -1;
+			}else if(leftIntArray[i] > rightIntArray[i]){
+				return 1;				
+			}
+		}
+		return 0;
+	}
+
 }

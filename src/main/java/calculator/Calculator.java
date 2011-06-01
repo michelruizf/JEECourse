@@ -6,4 +6,6 @@ public interface Calculator {
 
 	String subtract(String left, String right);
 
+	int compare(String left, String right);
+
 }
