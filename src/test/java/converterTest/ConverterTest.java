@@ -6,7 +6,6 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import commons.arrayCalculator.ArrayCalculator;
@@ -52,7 +51,6 @@ public class ConverterTest{
 	}
 	
 	@Test
-	@Ignore
 	public void invertArray(){
 		int[] array = {1,2,3};
 		Converter converter = new ConverterReal();
@@ -124,7 +122,7 @@ public class ConverterTest{
 		ArrayCalculator simpleCalculator = new ArrayCalculator();
 		List<Integer> result = simpleCalculator.subtractArrays(largerArray, smallerArray);
 		
-		List<Integer> expected = Arrays.asList(0,3,4);
+		List<Integer> expected = Arrays.asList(-1,3,4);
 		
 		assertEquals("Result of add arrays", expected, result);
 	}

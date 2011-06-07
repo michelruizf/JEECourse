@@ -27,7 +27,6 @@ public class Utils {
 		StringBuffer stringBuffer = new StringBuffer();
 
 		for (Integer element : collection) {
-
 			stringBuffer.append(element.toString());
 		}
 

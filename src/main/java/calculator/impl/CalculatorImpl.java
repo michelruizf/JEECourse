@@ -7,7 +7,7 @@ import commons.utils.Utils;
 
 import calculator.Calculator;
 
-public class CalculatorImpl implements Calculator {
+class CalculatorImpl implements Calculator {
 	
 	private int[] leftIntArray;
 	private int[] rightIntArray;
