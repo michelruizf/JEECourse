@@ -12,20 +12,24 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>calculator</name>
+  <name>huge-integer-calc-core</name>
   <url>http://maven.apache.org</url>
 
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>huge-integer-calc</groupId>
+  			<artifactId>huge-integer-calc</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  			<type>pom</type>
+  			<scope>compile</scope>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
   <properties>
   </properties>
 
   <dependencies>
-  	<dependency>
-  		<groupId>junit</groupId>
-  		<artifactId>junit</artifactId>
-  		<version>4.8.2</version>
-  		<type>jar</type>
-  		<scope>test</scope>
-  	</dependency>
   	<dependency>
   		<groupId>com.google.guava</groupId>
   		<artifactId>guava</artifactId>

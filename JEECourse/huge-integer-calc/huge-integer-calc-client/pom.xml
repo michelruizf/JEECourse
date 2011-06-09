@@ -15,8 +15,18 @@
   <name>huge-integer-calc-client</name>
   <url>http://maven.apache.org</url>
 
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>huge-integer-calc</groupId>
+  			<artifactId>huge-integer-calc</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  			<type>pom</type>
+  			<scope>compile</scope>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
@@ -25,6 +35,13 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>huge-integer-calc</groupId>
+    	<artifactId>huge-integer-calc-core</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
     </dependency>
   </dependencies>
 </project>
