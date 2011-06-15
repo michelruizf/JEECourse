@@ -17,7 +17,6 @@ public class CalculatorClientProxy implements Calculator{
 
 	public CalculatorClientProxy(Socket clientSocket) throws IOException {
 		this.clientSocket = clientSocket;
-		this.input = new ObjectInputStream(clientSocket.getInputStream());
 		this.output = new ObjectOutputStream(clientSocket.getOutputStream());
 	}
 
@@ -40,7 +39,10 @@ public class CalculatorClientProxy implements Calculator{
 		
 		String result = new String();
 		try {
+
 			output.writeObject(calculatorDto);
+			output.flush();
+			input = new ObjectInputStream(clientSocket.getInputStream());
 			result = ((CalculatorDTO)input.readObject()).getResult();
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());

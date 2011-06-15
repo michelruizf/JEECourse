@@ -13,6 +13,9 @@ public class ClientTest {
 			String addResult = newCalculator.add("1", "2");
 			System.out.println("Added\n");
 			System.out.println("Add Result: " + addResult);
+			String subtractResult = newCalculator.add("1", "2");
+			System.out.println("Subtracted\n");
+			System.out.println("Subtracted Result: " + subtractResult);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

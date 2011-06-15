@@ -3,7 +3,6 @@ package server;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -16,11 +15,12 @@ public class ServerTest {
 	public static void main(String[] args) {
 		try {
 			System.out.println("Initializing the fucking Server\n");			
-			ServerSocket serverSocket = new ServerSocket(1000, 0, InetAddress.getLocalHost());			
+			ServerSocket serverSocket = new ServerSocket(1000);			
 			Socket socket = serverSocket.accept();
 			System.out.println("Client connection accepted\n");
 			ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
 			ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
+			
 			
 			Calculator newCalculator = CalculatorServerFactory.newCalculator();
 			
@@ -39,6 +39,7 @@ public class ServerTest {
 			
 			calculatorDto.setResult(result);
 			output.writeObject(calculatorDto);
+			output.flush();
 			System.out.println("CalculatorDTO sent\n");
 			
 		} catch (IOException e) {
