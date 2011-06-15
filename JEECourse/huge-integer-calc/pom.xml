@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>huge-integer-calc</groupId>
@@ -33,6 +33,20 @@
   			<type>jar</type>
   			<scope>compile</scope>
   		</dependency>
+  		<dependency>
+  			<groupId>huge-integer-calc-protocol</groupId>
+  			<artifactId>huge-integer-calc-protocol</artifactId>
+  			<version>${project.version}</version>
+  			<type>jar</type>
+  			<scope>compile</scope>
+  		</dependency>
+  		<dependency>
+  			<groupId>huge-integer-calc-protocol</groupId>
+  			<artifactId>huge-integer-calc-protocol</artifactId>
+  			<version>${project.version}</version>
+  			<type>jar</type>
+  			<scope>compile</scope>
+  		</dependency>
   	</dependencies>
   </dependencyManagement>
   <properties>
@@ -45,5 +59,7 @@
   	<module>huge-integer-calc-core</module>
   	<module>huge-integer-calc-server</module>
   	<module>huge-integer-calc-spikes</module>
+    <module>huge-integer-calc-comunication</module>
+    <module>huge-integer-calc-protocol</module>
   </modules>
 </project>
