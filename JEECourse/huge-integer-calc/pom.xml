@@ -41,8 +41,8 @@
   			<scope>compile</scope>
   		</dependency>
   		<dependency>
-  			<groupId>huge-integer-calc-protocol</groupId>
-  			<artifactId>huge-integer-calc-protocol</artifactId>
+  			<groupId>huge-integer-calc-comunication</groupId>
+  			<artifactId>huge-integer-calc-comunication</artifactId>
   			<version>${project.version}</version>
   			<type>jar</type>
   			<scope>compile</scope>

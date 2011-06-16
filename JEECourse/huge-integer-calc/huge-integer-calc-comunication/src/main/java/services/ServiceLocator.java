@@ -14,14 +14,15 @@ public class ServiceLocator {
 
 	public static Calculator getService(Class<?> clazz) {
 		Calculator calculator = null;
-		InetSocketAddress address = RegistryService.getServiceAddress(clazz);
+		
 		try {
-			Socket socket = new Socket(address.getHostName(), address.getPort());
+			InetSocketAddress address = RegistryService.getServiceAddress(clazz);
+			Socket socket = new Socket("localhost", address.getPort());
 			calculator = new CalculatorClientProxy(socket);
 		} catch (UnknownHostException e) {
-			System.out.println("\nErro: " + e.getMessage());
+			System.out.println("An error occurred: " + e.getMessage());
 		} catch (IOException e) {
-			System.out.println("\nErro: " + e.getMessage());
+			System.out.println("An error occurred: " + e.getMessage());
 		}
 		return calculator;
 	}

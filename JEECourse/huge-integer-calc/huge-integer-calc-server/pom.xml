@@ -33,5 +33,18 @@
     	<type>jar</type>
     	<scope>compile</scope>
     </dependency>
+    <dependency>
+    	<groupId>huge-integer-calc-comunication</groupId>
+    	<artifactId>huge-integer-calc-comunication</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>huge-integer-calc-protocol</groupId>
+    	<artifactId>huge-integer-calc-protocol</artifactId>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
   </dependencies>
 </project>

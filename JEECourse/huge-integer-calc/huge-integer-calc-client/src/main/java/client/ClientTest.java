@@ -1,23 +1,21 @@
 package client;
 
+import services.ServiceLocator;
 import calculator.Calculator;
-import factory.CalculatorClientFactory;
 
 public class ClientTest {
 
 	public static void main(String[] args) {
 		try {
 			System.out.println("Initializing the fucking Client\n");
-			Calculator newCalculator = CalculatorClientFactory.newCalculator();
-			System.out.println("CalculatorClientFactory created\n");
-			String addResult = newCalculator.add("1", "2");
-			System.out.println("Added\n");
-			System.out.println("Add Result: " + addResult);
-			String subtractResult = newCalculator.add("1", "2");
-			System.out.println("Subtracted\n");
-			System.out.println("Subtracted Result: " + subtractResult);
+			System.out.println("Looking for a service to the calculator...\n");
+			Calculator calculator = ServiceLocator.getService(Calculator.class);
+			System.out.println("Service calculator found ...\n");
+			System.out.println("Performing an operation..\n");
+			String result = calculator.add("2", "1");
+			System.out.println("Result of operation " + result);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("An error occurred: " + e.getMessage());
 		}
 
 	}

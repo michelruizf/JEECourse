@@ -1,22 +1,41 @@
 package serverProxy;
 
+import java.net.Socket;
+
 import calculator.Calculator;
 
-public class CalculatorServerProxy implements Calculator{
+public class CalculatorServerProxy implements Calculator {
+	
+	private Calculator calculator;
+	private Socket serverSocket;
 
-	public String add(String left, String right) {
-		// TODO Auto-generated method stub
-		return null;
+	public Calculator getCalculator() {
+		return calculator;
 	}
 
-	public int compare(String left, String right) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void setCalculator(Calculator calculator) {
+		this.calculator = calculator;
+	}
+
+	public Socket getSocket() {
+		return serverSocket;
+	}
+
+	public CalculatorServerProxy(Socket socket, Calculator calculator) {
+		this.calculator = calculator;
+		this.serverSocket = socket;
+	}
+
+	public String add(String left, String right) {
+		return calculator.add(left, right);
 	}
 
 	public String subtract(String left, String right) {
-		// TODO Auto-generated method stub
-		return null;
+		return calculator.subtract(left, right);
+	}
+
+	public int compare(String left, String right) {
+		return calculator.compare(left, right);
 	}
 
 }
