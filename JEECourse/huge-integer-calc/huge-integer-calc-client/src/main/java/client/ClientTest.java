@@ -1,7 +1,7 @@
 package client;
 
-import services.ServiceLocator;
 import calculator.Calculator;
+import factory.CalculatorClientFactory;
 
 public class ClientTest {
 
@@ -9,7 +9,7 @@ public class ClientTest {
 		try {
 			System.out.println("Initializing the fucking Client\n");
 			System.out.println("Looking for a service to the calculator...\n");
-			Calculator calculator = ServiceLocator.getService(Calculator.class);
+			Calculator calculator = CalculatorClientFactory.newCalculator();
 			System.out.println("Service calculator found ...\n");
 			System.out.println("Performing an operation..\n");
 			String result = calculator.add("2", "1");

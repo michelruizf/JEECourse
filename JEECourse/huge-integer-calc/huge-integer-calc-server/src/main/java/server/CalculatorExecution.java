@@ -9,6 +9,10 @@ import dto.CalculatorDTO;
 public class CalculatorExecution implements Runnable {
 
 	private CalculatorServerProxy calculatorServerProxy;
+	private CalculatorDTO calculatorDto = new CalculatorDTO();
+	private String result;
+	private String left;
+	private String right;
 
 	public CalculatorExecution(CalculatorServerProxy calculatorServerProxy) {
 		this.calculatorServerProxy = calculatorServerProxy;
@@ -23,9 +27,9 @@ public class CalculatorExecution implements Runnable {
 
 			CalculatorDTO calculatorDto = (CalculatorDTO) input.readObject();
 			System.out.println("CalculatorDTO received\n");
-			String result;
-			String left = calculatorDto.getLeft();
-			String right = calculatorDto.getRight();
+
+			initializeValues();
+			
 			switch (calculatorDto.getOperation()) {
 			case ADD:
 				result = calculatorServerProxy.add(left, right);
@@ -50,6 +54,12 @@ public class CalculatorExecution implements Runnable {
 			System.out.println("An error occurred: " + e.getMessage());
 		}
 
+	}
+
+	private void initializeValues() {
+		left = calculatorDto.getLeft();
+		right = calculatorDto.getRight();
+		result = calculatorDto.getResult();
 	}
 
 }
