@@ -1,6 +1,7 @@
 package serverProxy;
 
 import java.net.Socket;
+import java.rmi.RemoteException;
 
 import calculator.Calculator;
 
@@ -26,15 +27,15 @@ public class CalculatorServerProxy implements Calculator {
 		this.serverSocket = socket;
 	}
 
-	public String add(String left, String right) {
+	public String add(String left, String right) throws RemoteException {
 		return calculator.add(left, right);
 	}
 
-	public String subtract(String left, String right) {
+	public String subtract(String left, String right) throws RemoteException {
 		return calculator.subtract(left, right);
 	}
 
-	public int compare(String left, String right) {
+	public int compare(String left, String right) throws RemoteException {
 		return calculator.compare(left, right);
 	}
 

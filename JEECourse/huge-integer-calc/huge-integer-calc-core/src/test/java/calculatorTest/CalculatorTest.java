@@ -2,6 +2,8 @@ package calculatorTest;
 
 import static org.junit.Assert.assertEquals;
 
+import java.rmi.RemoteException;
+
 import org.junit.Test;
 
 import calculator.Calculator;
@@ -10,7 +12,7 @@ import calculator.impl.CalculatorFactory;
 public class CalculatorTest {
 	
 	@Test
-	public void addHugeIntegers(){
+	public void addHugeIntegers() throws RemoteException{
 		Calculator calculator = CalculatorFactory.newCalculator();
 		String result = calculator.add("123456789012345", "9876543210");
 		
@@ -18,7 +20,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void subtractHugeIntegers(){
+	public void subtractHugeIntegers() throws RemoteException{
 		Calculator calculator = CalculatorFactory.newCalculator();
 		String result = calculator.subtract("123456789012345", "9876543210");
 		
@@ -26,7 +28,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void subtractHugeIntegers2(){
+	public void subtractHugeIntegers2() throws RemoteException{
 		Calculator calculator = CalculatorFactory.newCalculator();
 		String result = calculator.subtract("9876543210", "123456789012345");
 		
@@ -35,7 +37,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void compareStringLeftLower(){
+	public void compareStringLeftLower() throws RemoteException{
 		Calculator calculator = CalculatorFactory.newCalculator();
 		int result = calculator.compare("123","321");
 		
@@ -43,7 +45,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void compareStringLeftGreater(){
+	public void compareStringLeftGreater() throws RemoteException{
 		Calculator calculator = CalculatorFactory.newCalculator();
 		int result = calculator.compare("4123","321");
 		
@@ -51,7 +53,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void compareStringEquals(){
+	public void compareStringEquals() throws RemoteException{
 		Calculator calculator = CalculatorFactory.newCalculator();
 		int result = calculator.compare("321","321");
 		

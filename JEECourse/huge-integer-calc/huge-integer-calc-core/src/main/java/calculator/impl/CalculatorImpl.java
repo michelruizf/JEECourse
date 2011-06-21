@@ -1,19 +1,25 @@
 package calculator.impl;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
+
+import calculator.Calculator;
 
 import commons.arrayCalculator.ArrayCalculator;
 import commons.utils.Utils;
 
-import calculator.Calculator;
+class CalculatorImpl extends UnicastRemoteObject implements Calculator {
 
-class CalculatorImpl implements Calculator {
-	
+	private static final long serialVersionUID = 2786934594007694466L;
+
 	private int[] leftIntArray;
 	private int[] rightIntArray;
 	
 	private ArrayCalculator arrayCalculator = new ArrayCalculator();
 
+	CalculatorImpl() throws RemoteException {}
+	
 	public String add(String left, String right) {
 		
 		convertStringsToIntArray(left, right);

@@ -1,11 +1,14 @@
 package calculator;
 
-public interface Calculator {
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-	String add(String left, String right);
+public interface Calculator extends Remote{
 
-	String subtract(String left, String right);
+	String add(String left, String right) throws RemoteException;
 
-	int compare(String left, String right);
+	String subtract(String left, String right) throws RemoteException;
+
+	int compare(String left, String right) throws RemoteException;
 
 }
